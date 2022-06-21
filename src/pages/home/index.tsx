@@ -2,12 +2,12 @@ import React, {
   useState
 } from 'react';
 import {
-  HorizontalSpace,
-  SubTitle
+  HorizontalSpace
 } from 'rrmc';
 import { Link } from 'react-router-dom';
 import NavBar from 'src/components/_core/nav-bar';
 import Footer from 'src/components/_core/footer';
+import Header from 'src/components/header/header';
 
 const Home = (): React.ReactElement => {
   const [sectionMenu, setSectionMenu]: any = useState([]);
@@ -19,11 +19,7 @@ const Home = (): React.ReactElement => {
         sectionMenu={sectionMenu} />
       <div className='container'>
         <HorizontalSpace size='small' />
-        <SubTitle
-          text='Hello World'
-          fullWidth={true}
-          Link={Link}
-          align='left' />
+        <Header/>
         <HorizontalSpace size='small' />
         <Link to='/examples'>Samples</Link>
       </div>
