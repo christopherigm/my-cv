@@ -3,6 +3,7 @@ import './header.scss';
 import HeaderImage from './header-image';
 import {Title, StrongText, BasicText} from 'rrmc';
 import { Link } from 'react-router-dom';
+import Activities from './activities';
 
 const Header = (): React.ReactElement => {
   return (
@@ -14,6 +15,7 @@ const Header = (): React.ReactElement => {
         <Title text='Edgar Jonathan Guzman Monsalvo' Link={Link} align='left' fullWidth={true}/>
         <StrongText text='Perfil de usuario' align='left' fullWidth={true}/>
         <BasicText text='Ejemplo de descripción'/>
+        <Activities/>
       </div>
     </div>
   );
