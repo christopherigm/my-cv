@@ -1,7 +1,10 @@
 import React, {
   useRef
 } from 'react';
-import { HorizontalSpace } from 'rrmc';
+import {
+  HorizontalSpace,
+  SizesEnum
+} from 'rrmc';
 
 const EmailLoginFrom = ( props: any ): React.ReactElement => {
   const emailRef: any = useRef(null);
@@ -27,16 +30,14 @@ const EmailLoginFrom = ( props: any ): React.ReactElement => {
           ref={passwordRef} disabled={props.isLoading} />
         <label htmlFor='password'>Contrasena</label>
       </div>
-      <div className='col s12'><HorizontalSpace size='small' /></div>
+      <div className='col s12'>
+        <HorizontalSpace size={SizesEnum.small} />
+      </div>
       <div className='col s12'>
         <input id='submit' type='submit'
           value='Login'
           className='waves-effect waves-light btn right cyan darken-1 right white-text'
           disabled={!validForm()} />
-      </div>
-      <div className={`col s12 ${ props.isLoading ? '' : 'hide' }`}><HorizontalSpace size='small' /></div>
-      <div className={`progress col s12 ${ props.isLoading ? '' : 'hide' }`}>
-        <div className='indeterminate'></div>
       </div>
     </form>
   );

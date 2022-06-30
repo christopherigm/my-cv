@@ -3,7 +3,9 @@ import React, {
 } from 'react';
 import {
   HorizontalSpace,
-  SubTitle
+  SubTitle,
+  SizesEnum,
+  TextAlignEnum
 } from 'rrmc';
 import NavBar from 'src/components/_core/nav-bar';
 import Footer from 'src/components/_core/footer';
@@ -20,21 +22,25 @@ const Examples = (): React.ReactElement => {
         setSectionMenu={setSectionMenu}
         sectionMenu={sectionMenu} />
       <div className='container'>
-        <HorizontalSpace size='small' />
+        <HorizontalSpace size={SizesEnum.small} />
         <SubTitle
           text='Examples'
           fullWidth={true}
-          align='left' />
-        <HorizontalSpace size='small' />
+          align={TextAlignEnum.left} />
+        <HorizontalSpace size={SizesEnum.small} />
         <a
           className='waves-effect waves-light btn'
-          onClick={() => dispatch(OpenGlobalAlertDialog('global-alert-sample-ok'))}>
+          onClick={() => dispatch(OpenGlobalAlertDialog({
+            dialog: 'global-alert-sample-ok'
+          }))}>
           Global alert OK
         </a>
-        <HorizontalSpace size='x-small' />
+        <HorizontalSpace size={SizesEnum.small} />
         <a
           className='waves-effect waves-light btn'
-          onClick={() => dispatch(OpenGlobalAlertDialog('global-alert-sample-fail'))}>
+          onClick={() => dispatch(OpenGlobalAlertDialog({
+            dialog: 'global-alert-sample-fail'
+          }))}>
           Global alert Fail
         </a>
       </div>

@@ -10,7 +10,7 @@ const jenkinsURL = 'https://jenkins.iguzman.com.mx';
 const jenkinsURLProd = 'https://jenkins.icv.com';
 const apiURL = 'https://api.icv.iguzman.com.mx/v1/';
 const apiURLProd = 'https://api.icv.com/v1/';
-const registry = 'registry.iguzman.com.mx';
+const registry = 'christopherguzman';
 // Editable variables
 
 const args = process.argv;

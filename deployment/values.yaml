@@ -1,0 +1,8 @@
+replicas: 1
+service:
+  externalPort: 80
+  internalPort: 3000
+host: "icv.iguzman.com.mx"
+image: "christopherguzman/icv"
+tag: "main"
+branch: "main"
