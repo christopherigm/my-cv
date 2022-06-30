@@ -2,7 +2,10 @@ import React, {
   useEffect,
   useState
 } from 'react';
-import { HorizontalSpace } from 'rrmc';
+import {
+  HorizontalSpace,
+  SizesEnum
+} from 'rrmc';
 import { useParams } from 'react-router-dom';
 import NavBar from 'src/components/_core/nav-bar';
 import Footer from 'src/components/_core/footer';
@@ -18,7 +21,7 @@ const ActivateUser = (): React.ReactElement => {
   const token = params.token || null;
 
   useEffect(() => {
-    APISDK.ActivateUserCall( token )
+    APISDK.ActivateUser( token )
       .then((data: any) => {
         setStatus({
           success: data.success,
@@ -38,7 +41,7 @@ const ActivateUser = (): React.ReactElement => {
       <NavBar
         setSectionMenu={setSectionMenu}
         sectionMenu={sectionMenu} />
-      <HorizontalSpace size='large' />
+      <HorizontalSpace size={SizesEnum.large} />
       <p>{ status.success ? 'Cuenta activada correctamente' : status.message }</p>
       <Footer />
     </div>
